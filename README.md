@@ -11,6 +11,7 @@ The basic course of Blockchain and Bitcoin on Coursera.
 - Week 3: Mechanis of Bitcoin
 - Week 4: Howto Store and Use Bitcoins
 - Week 5: Bitcoin Mining 
+
 - Week 6: Bitcoin and Anonymity 
 - Week 7: Community, Politics and Regulation 
 - Week 8: Alternative Mining Puzzles 
