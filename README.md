@@ -72,6 +72,23 @@ As every concept or approach may have its own benefits and downside, PoW has its
 · Possibility of miners moving their hardware to mine a different coin if the reward is better there(loyalty)
 · With more and more coins(like more count of bitcoins) getting released, miner’s reward would come down as the coin becomes scarce to mine
 
+# Proof of Stake (PoS)
+Proof of Stake (PoS) is an alternate way of verifying and validating the transaction or block. This will pick the Validator (Equivalent of “miner” in the PoW) by the amount of stake(coins) a validator has and the respective age of the stake. If you have 100,000 alt coins (let us say Nxt coin which use PoS) in a wallet, it will have an age attached to it on how long you have it. Here the 100,000 Nxt coins is the stake. If you move your coins from one address (or wallet) to another the aging gets reset. This amount is like the security deposit which means the Validator holds a significant stake in Nxt coin with good aging is more committed and combined with many other factors, will get a higher chance to validate a block. This allows building a trusted and distributed network with loyal Validators (high stake of coins). The Validators earns the part or whole of the transaction fee. In PoS, it is not “mining” but “forging” which is done by the Validator who will process and forge a block to the chain.
+
+This eliminates the below challenges from PoW and believed to have an advantage
+
+· No need of expensive hardware(a normal laptop or computer running the respective coin’s Validator client will do as long as your laptop or computer is online)
+· Energy efficient as it won’t consume high electricity as PoW does
+· More loyal Validators …As higher the stake the Validators have for a long time, more chances for the Validator to be picked up for “forging” and earn the transaction fee
+· Faster validations
+
+In PoS, each validator owns some stake in the network, Ether in the case of Ethereum, that they bond. Bonding stake means you deposit some money into the network, and in some sense use it as a collateral to vouch for a block. In PoW you know a chain is valid because lots of work is behind it, while in PoS you trust the chain with the highest collateral.
+
+There are much more differences between the various Proof of Stake algorithms that are being developed but I am limiting to what I said so far just to provide a higher level of differnces.
+
+There are currently issues with PoS as well, such as a small group of people owning a majority of tokens/coins will be the Validators but it is still evolving and eventually more solid and robust will be out there at some point in time. 
+
+https://lvena26b6e621o8sl2qkx1ql-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/posvspow-453x450.jpg
 
 # Reference
 [1] https://medium.com/@interlogica/the-nakamoto-consensus-ccdb7288169a
