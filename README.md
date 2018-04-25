@@ -1,27 +1,27 @@
 # BlockchainIoT
 
-If you really want to study blockchain and cryptocurrency world, I would like to recommend that you start your journey by reading two very important white papers: 
+If you really want to study blockchain and cryptocurrency world, I would like to recommend that you start your journey by reading two very important white papers:
 - Bitcoin: A Peer-to-Peer Electronic Cash System
 - Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform
 
 
-The basic course of Blockchain and Bitcoin on Coursera. 
-- Week 1: Introduction to Crypto and Cryptocurrencies 
-- Week 2: How Bitcoin Achieves Decentralization 
+The basic course of Blockchain and Bitcoin on Coursera.
+- Week 1: Introduction to Crypto and Cryptocurrencies
+- Week 2: How Bitcoin Achieves Decentralization
 - Week 3: Mechanis of Bitcoin
 - Week 4: Howto Store and Use Bitcoins
-- Week 5: Bitcoin Mining 
-- Week 6: Bitcoin and Anonymity 
-- Week 7: Community, Politics and Regulation 
-- Week 8: Alternative Mining Puzzles 
+- Week 5: Bitcoin Mining
+- Week 6: Bitcoin and Anonymity
+- Week 7: Community, Politics and Regulation
+- Week 8: Alternative Mining Puzzles
 - Week 9: Bitcoin as a Platform
 - Week 10: Altcoins and Cryptocurrency Ecosystem
-- Week 11: The Future of Bitcoin  ? 
+- Week 11: The Future of Bitcoin  ?
 
 # Basic Knowledge of Blockchain Technology: (Important Notes)
-# 1. Principles of Bitcoin and Ethereum 
+# 1. Principles of Bitcoin and Ethereum
 
-# What is mining ? 
+# What is mining ?
 Mining is a process of validating a transaction or block in a network by the process of complex algorithms to prove and validate the correctness of the transaction and thereby add the new block to the chain. You would have heard this term “mining” and “miners” more in bitcoin than altcoins. What does it take to be a miner and do mining?
 
 You need to have high power processor based computers running continuously with the complex mining algorithms.
@@ -34,13 +34,13 @@ There are some alt coins which follow a different consensus process and/or algor
 
 # 2. Nakamoto Consensus
 
-- It's now clear that anyone that wanted to builded a digital currency at the beginning of this century had to find a way to make it decentralized, hard to attack and with a real, intrinsic value. And in 2008, Satoshi Nakamoto was able to deliver all of this in a peer to peer network, a shared data strucuture blockchain which a set of rules we call Nakamoto Consensus. 
-- All of the Bitcoin design is based on the premise that external and internal rational agents have an incentive to destroy or attempt to destroy the network or rob one another to increase their profits or to avoids any losses. On these premises, which are quite realistic, a simple p2 network would have never been useful. 
--  The nakamoto consensus includes a set of rules, most of which regard transaction's validation and transaction's blocks. The latter are transaction groups close in time, cryptographyically concatenated to compose the blockchain. Despite their importantance, there are not the set of rules that gurantee the security and value of the Bitcoin blockchain. Those are mining, deflation trend and block selection rules. 
-- Mining is a process of validating a transaction or block in a network by the process of complex algorithms to prove  and validate the correctness of the transaction and thereby add the new block to the chain. 
-- Mining is the process through Bitcoins get created. It is a proof-of-work simular to RPOW, and its difficulty increases with the usage of the network. The process is strictly related to the creation of new blocks, and the proceduced bitcoin quantity is recognised only by the approval of the associated block. Nodes that can "mine" bitcoin, earn the mined quantity, but with time this quantity diminishes, up to a point where the netwok will have proceduced 21M bitcoins. Block selection rules deal with choosing which one to add to the blockchain. With Bitcoin, the blocks are selected to obtain the blockchain withn the higher amount of work, meaning the most computing time spent in the mining process. 
-- How can these simple rules guarantee the security of the network and the bitcoin value? 
-With Bitcoin, anyone can host a node and connect to the network. Nodes are anonnymous to make them harder to target and compromise. In an open an anonymous environment it's not possible to punish single nodes for malicious behavior, so it has to be discouraged. 
+- It's now clear that anyone that wanted to builded a digital currency at the beginning of this century had to find a way to make it decentralized, hard to attack and with a real, intrinsic value. And in 2008, Satoshi Nakamoto was able to deliver all of this in a peer to peer network, a shared data strucuture blockchain which a set of rules we call Nakamoto Consensus.
+- All of the Bitcoin design is based on the premise that external and internal rational agents have an incentive to destroy or attempt to destroy the network or rob one another to increase their profits or to avoids any losses. On these premises, which are quite realistic, a simple p2 network would have never been useful.
+-  The nakamoto consensus includes a set of rules, most of which regard transaction's validation and transaction's blocks. The latter are transaction groups close in time, cryptographyically concatenated to compose the blockchain. Despite their importantance, there are not the set of rules that gurantee the security and value of the Bitcoin blockchain. Those are mining, deflation trend and block selection rules.
+- Mining is a process of validating a transaction or block in a network by the process of complex algorithms to prove  and validate the correctness of the transaction and thereby add the new block to the chain.
+- Mining is the process through Bitcoins get created. It is a proof-of-work simular to RPOW, and its difficulty increases with the usage of the network. The process is strictly related to the creation of new blocks, and the proceduced bitcoin quantity is recognised only by the approval of the associated block. Nodes that can "mine" bitcoin, earn the mined quantity, but with time this quantity diminishes, up to a point where the netwok will have proceduced 21M bitcoins. Block selection rules deal with choosing which one to add to the blockchain. With Bitcoin, the blocks are selected to obtain the blockchain withn the higher amount of work, meaning the most computing time spent in the mining process.
+- How can these simple rules guarantee the security of the network and the bitcoin value?
+With Bitcoin, anyone can host a node and connect to the network. Nodes are anonnymous to make them harder to target and compromise. In an open an anonymous environment it's not possible to punish single nodes for malicious behavior, so it has to be discouraged.
 The mining process is stochastic, so it’s not possible to accurately know who will find the solution, even if the increasing difficulty of the process makes the amount of nodes able to carry out the calculations smaller. This makes mining like a lottery where participation costs are always increasing. This discourages all agents not willing to invest economic value from participating to the game. While the usage increases, and thus the value, the difficulty increases as well, discouraging anyone who wants to compromise the network. Furthermore, the increasing value forces the “honest” agents to invest more in securing their nodes and, consequently, the network.
 The validation rules make sure that no honest agent is going to accept malformed blocks, because this would damage the whole network. Block selection rules make sure that only valid blocks that have enough work invested into (as in computational resources) are accepted. Even if malicious nodes wanted to promote a blockchain that benefits them, this would require an ever increasing need of resources, and consequently economic resources as well. The produced blockchain would then have to compete with blockchains produced in years and with a high amount of other very competitive nodes. This conditions secure the network, which in turn strengthens the value of the currency, given the deflations and the costs of computational resources (CPU, storage, …) and consequently economic resources (users, servers) of the mining process.
 
@@ -54,8 +54,8 @@ Bitcoin forces agents that want to mine to reveal their willingness to become ca
 In turn, deflation reinforces this mechanism, since it ensures that participants that won the lottery in the past used resources that will have a higher value in the future, as long as the network works.
 The game theory shows us how it’s not possible to guarantee the resolution of non-cooperative games using just one iteration, but with sequential games (meaning more than one interaction), there are a number of possible strategies to line up incentives. The majority of these strategies is some form of collusion between agents (pacts, corruption, cartels, etc). Bitcoin lines up incentives between agents in the long term simply by using deflation, avoiding the need for expensive transactions and “political” solutions. This guarantees, in the long term, the value of the network since there’s not risk that agents find a consensus.
 
-# 3. Simplified Paymen Verification 
-It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which we can get by querying network nodes until we are convinced we have the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. we can't check the transaction for ourshelves, but by linking it to a place in the chain, we can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it. 
+# 3. Simplified Paymen Verification
+It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which we can get by querying network nodes until we are convinced we have the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. we can't check the transaction for ourshelves, but by linking it to a place in the chain, we can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it.
 Thus, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacked. While the network nodes can verify transactions for themselve, the simplified method can be fooled by an atacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alearted transaction to confirm the inconsistency.  
 
 # Proof of Work (PoW)
@@ -72,6 +72,9 @@ As every concept or approach may have its own benefits and downside, PoW has its
 · Possibility of miners moving their hardware to mine a different coin if the reward is better there(loyalty)
 · With more and more coins(like more count of bitcoins) getting released, miner’s reward would come down as the coin becomes scarce to mine
 
+A proof of work algorithm (PoW) is how new blocks are created or mined on the blockchain. The goal of PoW is to discover a number which solves a problem. The number must difficult to find but easy to verify by anyone on the network. This is the core idea behind Proof of Work. 
+
+
 # Proof of Stake (PoS)
 Proof of Stake (PoS) is an alternate way of verifying and validating the transaction or block. This will pick the Validator (Equivalent of “miner” in the PoW) by the amount of stake(coins) a validator has and the respective age of the stake. If you have 100,000 alt coins (let us say Nxt coin which use PoS) in a wallet, it will have an age attached to it on how long you have it. Here the 100,000 Nxt coins is the stake. If you move your coins from one address (or wallet) to another the aging gets reset. This amount is like the security deposit which means the Validator holds a significant stake in Nxt coin with good aging is more committed and combined with many other factors, will get a higher chance to validate a block. This allows building a trusted and distributed network with loyal Validators (high stake of coins). The Validators earns the part or whole of the transaction fee. In PoS, it is not “mining” but “forging” which is done by the Validator who will process and forge a block to the chain.
 
@@ -86,10 +89,10 @@ In PoS, each validator owns some stake in the network, Ether in the case of Ethe
 
 There are much more differences between the various Proof of Stake algorithms that are being developed but I am limiting to what I said so far just to provide a higher level of differnces.
 
-There are currently issues with PoS as well, such as a small group of people owning a majority of tokens/coins will be the Validators but it is still evolving and eventually more solid and robust will be out there at some point in time. 
+There are currently issues with PoS as well, such as a small group of people owning a majority of tokens/coins will be the Validators but it is still evolving and eventually more solid and robust will be out there at some point in time.
 
 https://lvena26b6e621o8sl2qkx1ql-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/posvspow-453x450.jpg
 
 # Reference
 [1] https://medium.com/@interlogica/the-nakamoto-consensus-ccdb7288169a
-[2] 
+[2]

@@ -1,6 +1,6 @@
 import hashlib
 import json
-from time import time 
+from time import time
 
 class blockchain(object):
 	def __init__(self):
@@ -34,11 +34,11 @@ class blockchain(object):
 	def new_transaction(self, sender, recipient, amount):
 		"""
 		sender: str, address of sender
-		recipient: str, address of receiver 
+		recipient: str, address of receiver
 		amount: int, amount
 		return: int , the index of the block that will hold the transaction
 		"""
 
 		self.current_transaction.append({
-			
+
 			})
