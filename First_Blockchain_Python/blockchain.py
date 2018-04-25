@@ -31,4 +31,14 @@ class blockchain(object):
 		return block
 
 
-	def new_transaction(self, )
+	def new_transaction(self, sender, recipient, amount):
+		"""
+		sender: str, address of sender
+		recipient: str, address of receiver 
+		amount: int, amount
+		return: int , the index of the block that will hold the transaction
+		"""
+
+		self.current_transaction.append({
+			
+			})
