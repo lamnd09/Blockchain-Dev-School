@@ -1,7 +1,10 @@
 import hashlib as hasher
 from datetime import datetime
+from flask import Flask
+from flask import request
 
-class Block:
+
+class Blockchain:
     def __init__(self, index, timestamp, data, previous_hash):
         """
 
@@ -27,7 +30,7 @@ class Block:
 
 # Genesis block
 def create_genesis_block():
-    return Block(0, datetime.now(), "genesis", "0")
+    return Blockchain(0, datetime.now(), "genesis", "0")
 
 
 def next_block(last_block):
@@ -35,7 +38,7 @@ def next_block(last_block):
     this_timestamp = datetime.now()
     this_data = "data" + str(this_index)
     this_hash = last_block.hash
-    return Block(this_index, this_timestamp, this_data,this_hash)
+    return Blockchain(this_index, this_timestamp, this_data,this_hash)
 
 
 # Create a blockchain
@@ -51,3 +54,17 @@ for i in range(0, number_of_blocks):
 
     print(" Block #{} has been added".format(block_to_add.index))
     print(" Hash: #{}\n".format(block_to_add.hash))
+
+
+node = Flask(__name__)
+this_node_transactions = []
+
+@node.route('/txtion', methods=['POST'])
+
+def transaction():
+    if request.method == 'POST':
+        new_txion = request.get_json()
+        this_node_transactions.append(new_txion)
+
+        print(" New Transaction")
+        print("From : {} ".format(new_txion['from']))
