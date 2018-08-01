@@ -105,6 +105,3 @@ This space tries to show all papers about security analysis of smart contract.
 - **Bitcoin: A Peer-to-Peer Electronic Cash System** (2009), Satoshi Nakamoto. [[pdf]](https://bitcoin.org/bitcoin.pdf)
 
 
-
-## License
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
