@@ -1,98 +1,110 @@
-# BlockchainIoT
+# Papers and Tools for Smart Contract Security Analysis
 
-If you really want to study blockchain and cryptocurrency world, I would like to recommend that you start your journey by reading two very important white papers:
-- Bitcoin: A Peer-to-Peer Electronic Cash System
-- Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform
+This space tries to show all papers about security analysis of smart contract.
 
+## Contents
 
-The basic course of Blockchain and Bitcoin on Coursera.
-- Week 1: Introduction to Crypto and Cryptocurrencies
-- Week 2: How Bitcoin Achieves Decentralization
-- Week 3: Mechanis of Bitcoin
-- Week 4: Howto Store and Use Bitcoins
-- Week 5: Bitcoin Mining
-- Week 6: Bitcoin and Anonymity
-- Week 7: Community, Politics and Regulation
-- Week 8: Alternative Mining Puzzles
-- Week 9: Bitcoin as a Platform
-- Week 10: Altcoins and Cryptocurrency Ecosystem
-- Week 11: The Future of Bitcoin  ?
+* [Overview](#overview)
+* [Tools](#security-analysis-tools)
+* [2018 Papers](#2018-papers) : Proceeding
+* [2017 Papers](#2017-papers)
+* [2015-6 Papers](#2015-6-papers)
+* [Security SCI(E) Journal list](#security-sci(e)-journal-list)
+* [Links / Tutorials](#links--tutorials)
+* [References](#references)
+* * *
 
-# Basic Knowledge of Blockchain Technology: (Important Notes)
-# 1. Principles of Bitcoin and Ethereum
+### Overview
+| Vulnerability | ReEntrancy | Immutable Bugs | Minhandled Exceptions | TOD | Untrusted Value Dependency | Gas Costly Pattern | tx.origin |
+|------------------------------|------------|----------------------------------------------------------------|----------------------------------------------|-----|----------------------------|--------------------|-------------|
+| Subordinate Items |  | Integer Overflow/Underflow / Callstack Depth / Short Address | Unchecked Send / Unchekced Low Level Calls |  | Blackhash / Timestamp |  |  |
+| Characteristics /Correlation |  |  | DoS, Interaction |  | Randomness | DoS | Interaction |
 
-# What is mining ?
-Mining is a process of validating a transaction or block in a network by the process of complex algorithms to prove and validate the correctness of the transaction and thereby add the new block to the chain. You would have heard this term “mining” and “miners” more in bitcoin than altcoins. What does it take to be a miner and do mining?
+### Security Analysis Tools
+*Tools which are available. There can be paid services to use full features.*
 
-You need to have high power processor based computers running continuously with the complex mining algorithms.
-
-When a transaction happens in the respective coin’s network(let us say in bitcoin network here for easy understanding), more the computing power and more the computers you have, you may get to validate the transaction faster than other miners in the network and hence may earn a fraction of a bitcoin as a reward.
-
-Anybody who can have the above mentioned hardware and setup, can be miner
-
-There are some alt coins which follow a different consensus process and/or algorithms that is not through the process of “mining” and hence they will be referred as “Not Mineable” coins
-
-# 2. Nakamoto Consensus
-
-- It's now clear that anyone that wanted to builded a digital currency at the beginning of this century had to find a way to make it decentralized, hard to attack and with a real, intrinsic value. And in 2008, Satoshi Nakamoto was able to deliver all of this in a peer to peer network, a shared data strucuture blockchain which a set of rules we call Nakamoto Consensus.
-- All of the Bitcoin design is based on the premise that external and internal rational agents have an incentive to destroy or attempt to destroy the network or rob one another to increase their profits or to avoids any losses. On these premises, which are quite realistic, a simple p2 network would have never been useful.
--  The nakamoto consensus includes a set of rules, most of which regard transaction's validation and transaction's blocks. The latter are transaction groups close in time, cryptographyically concatenated to compose the blockchain. Despite their importantance, there are not the set of rules that gurantee the security and value of the Bitcoin blockchain. Those are mining, deflation trend and block selection rules.
-- Mining is a process of validating a transaction or block in a network by the process of complex algorithms to prove  and validate the correctness of the transaction and thereby add the new block to the chain.
-- Mining is the process through Bitcoins get created. It is a proof-of-work simular to RPOW, and its difficulty increases with the usage of the network. The process is strictly related to the creation of new blocks, and the proceduced bitcoin quantity is recognised only by the approval of the associated block. Nodes that can "mine" bitcoin, earn the mined quantity, but with time this quantity diminishes, up to a point where the netwok will have proceduced 21M bitcoins. Block selection rules deal with choosing which one to add to the blockchain. With Bitcoin, the blocks are selected to obtain the blockchain withn the higher amount of work, meaning the most computing time spent in the mining process.
-- How can these simple rules guarantee the security of the network and the bitcoin value?
-With Bitcoin, anyone can host a node and connect to the network. Nodes are anonnymous to make them harder to target and compromise. In an open an anonymous environment it's not possible to punish single nodes for malicious behavior, so it has to be discouraged.
-The mining process is stochastic, so it’s not possible to accurately know who will find the solution, even if the increasing difficulty of the process makes the amount of nodes able to carry out the calculations smaller. This makes mining like a lottery where participation costs are always increasing. This discourages all agents not willing to invest economic value from participating to the game. While the usage increases, and thus the value, the difficulty increases as well, discouraging anyone who wants to compromise the network. Furthermore, the increasing value forces the “honest” agents to invest more in securing their nodes and, consequently, the network.
-The validation rules make sure that no honest agent is going to accept malformed blocks, because this would damage the whole network. Block selection rules make sure that only valid blocks that have enough work invested into (as in computational resources) are accepted. Even if malicious nodes wanted to promote a blockchain that benefits them, this would require an ever increasing need of resources, and consequently economic resources as well. The produced blockchain would then have to compete with blockchains produced in years and with a high amount of other very competitive nodes. This conditions secure the network, which in turn strengthens the value of the currency, given the deflations and the costs of computational resources (CPU, storage, …) and consequently economic resources (users, servers) of the mining process.
-
-What does this have to do with mechanism design?
-The mining process of Bitcoin is variant of what we call random serial dictatorship in mechanism design.
-One of the most important problems in mechanism design is the resource allocation (houses, contracts, work, etc). In these cases, each agent has informations about its own preferences, which once revealed, could make it easier to execute the mechanism. Sadly, this is often not enough, because actors’ preferences are very similar if not identical between them. In these cases the best strategy is to use a random allocation.
-The random serial dictatorship means that for each iteration a “dictator” gets randomly chosen and it decides what to do based on the informations it posses. It’s a random variant of the serial dictatorship. The latter sorts through a list of “dictators” based on an arbitrary (but not random) criteria, creating equity problems and increasing the probability of defection o missing participation from actor that could otherwise have participated. Bitcoin adds to this mechanism a preselection-based costly commitment.
-
-Mining is expensive and its cost will increase as the network acquires a higher economic value. Without a similar mechanism, anyone would have an incentive to propose oneself as “dictator”, even with malicious intent or without having the capacity and requirements to secure the network.
-Bitcoin forces agents that want to mine to reveal their willingness to become candidates by spending resources that may not be recovered, since the “dictator” selection mechanism is random.
-In turn, deflation reinforces this mechanism, since it ensures that participants that won the lottery in the past used resources that will have a higher value in the future, as long as the network works.
-The game theory shows us how it’s not possible to guarantee the resolution of non-cooperative games using just one iteration, but with sequential games (meaning more than one interaction), there are a number of possible strategies to line up incentives. The majority of these strategies is some form of collusion between agents (pacts, corruption, cartels, etc). Bitcoin lines up incentives between agents in the long term simply by using deflation, avoiding the need for expensive transactions and “political” solutions. This guarantees, in the long term, the value of the network since there’s not risk that agents find a consensus.
-
-# 3. Simplified Paymen Verification
-It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which we can get by querying network nodes until we are convinced we have the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. we can't check the transaction for ourshelves, but by linking it to a place in the chain, we can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it.
-Thus, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacked. While the network nodes can verify transactions for themselve, the simplified method can be fooled by an atacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alearted transaction to confirm the inconsistency.  
-
-# Proof of Work (PoW)
-Proof of Work (PoW) as the name states is the validation of the work that happened and proving it is correct. Bitcoin and many alt coins follow this way of consensus to make sure the authenticity of the chain is good.
-
-To understand how it works in simple terms, assume that you are in a math exam along with other students in a classroom. The student who can, not only come up with the correct answer but also can come up with the complete proof (steps in math terms) of arriving at the correct answer first gets the reward. As we know this needs the student with lot of brain power which naturally consumes a lot of energy from the body.
-
-Now mapping it to the cryptocurrency world, “math exam” refers to the “transaction”, the “classroom” refers to the “world”, “Student” refers to the “computing hardware/computer” that runs the complex algorithms, “brain power” refers to the “computing power” and the “lot of energy” refers to the “lot of electric power”. I hope it is easier now to understand.
-
-As every concept or approach may have its own benefits and downside, PoW has its own downside as below
-
-· Requires more electric power which in turn costs the miner
-· High computing power hardware which is expensive(not if you are a millionaire :) )
-· Possibility of miners moving their hardware to mine a different coin if the reward is better there(loyalty)
-· With more and more coins(like more count of bitcoins) getting released, miner’s reward would come down as the coin becomes scarce to mine
-
-A proof of work algorithm (PoW) is how new blocks are created or mined on the blockchain. The goal of PoW is to discover a number which solves a problem. The number must difficult to find but easy to verify by anyone on the network. This is the core idea behind Proof of Work. 
+| Name | Available Path | Features | Related Paper |
+| :---:         |     :---      |     :---  |      :---: |
+| Oyente        | http://oyente.melon.fund  | symbolic execution  | [[pdf]](https://eprint.iacr.org/2016/633.pdf)    |
+| Securify     | http://securify.ch    | formal verification  |  [[pdf]](https://arxiv.org/pdf/1806.01143.pdf)   |
+| Remix        |  http://remix.ethereum.org     |  solidity compiler, debugger    |    |
+| SmartCheck        |    http://tool.smartdec.net     | static code analysis   |  |
+| Mythril        |  https://github.com/ConsenSys/mythril     |   concolic and taint analysis   |  [[pdf]](https://github.com/b-mueller/smashing-smart-contracts/blob/master/smashing-smart-contracts-1of1.pdf)  |
+| why3        |   http://why3.lri.fr/try/          | formal verification, general tool   |  |
 
 
-# Proof of Stake (PoS)
-Proof of Stake (PoS) is an alternate way of verifying and validating the transaction or block. This will pick the Validator (Equivalent of “miner” in the PoW) by the amount of stake(coins) a validator has and the respective age of the stake. If you have 100,000 alt coins (let us say Nxt coin which use PoS) in a wallet, it will have an age attached to it on how long you have it. Here the 100,000 Nxt coins is the stake. If you move your coins from one address (or wallet) to another the aging gets reset. This amount is like the security deposit which means the Validator holds a significant stake in Nxt coin with good aging is more committed and combined with many other factors, will get a higher chance to validate a block. This allows building a trusted and distributed network with loyal Validators (high stake of coins). The Validators earns the part or whole of the transaction fee. In PoS, it is not “mining” but “forging” which is done by the Validator who will process and forge a block to the chain.
+### 2018 papers
+*Newly published papers (in this year) which are worth reading*
+- **Securify: Practical Security Analysis of Smart Contracts** (2018), Petar Tsankov et al. [[pdf]](https://arxiv.org/pdf/1806.01143.pdf)
+- **Ekiden: A Platform for Confidentiality-Preserving, Trustworthy, and Performant Smart Contract Execution** (2018), Raymond Cheng et al. [[pdf]](https://arxiv.org/pdf/1804.05141.pdf)
+- **Smart Contracts: Security Patterns in the Ethereum Ecosystem and Solidity** (2018), Maximilian Wöhrer and Uwe Zdun. [[pdf]](http://eprints.cs.univie.ac.at/5433/7/sanerws18iwbosemain-id1-p-380f58e-35576-preprint.pdf)
+- **ZEUS: Analyzing Safety of Smart Contracts** (2018), Sukrit Kalra et al. [[pdf]](https://www.ndss-symposium.org/wp-content/uploads/sites/25/2018/02/ndss2018_09-1_Kalra_paper.pdf)
+- **Finding The Greedy, Prodigal, and Suicidal Contracts at Scale** (2018), Ivica Nikolic et al. [[pdf]](https://arxiv.org/pdf/1802.06038.pdf)
+- **Scilla: a Smart Contract Intermediate-Level LAnguage** (2018), Ilya Sergey et al. [[pdf]](https://arxiv.org/pdf/1801.00687.pdf)
+- **Formal verification of smart contracts based on users and blockchain behaviors models** (2018), Tesnim Abdellatif et al. [[pdf]](https://hal.archives-ouvertes.fr/hal-01760787/document)
+- **Smashing Ethereum smart contracts for fun and real profit** (2018),  Bernhard Mueller. [[pdf]](https://github.com/b-mueller/smashing-smart-contracts/blob/master/smashing-smart-contracts-1of1.pdf)
+- **Towards Verifying Ethereum Smart Contract Bytecode in Isabelle/HOL** (2018), Sidney Amani et al. [[pdf]](http://ssrg.nicta.com/publications/csiro_full_text//Amani_BSB_18.pdf)
+- **SoK: unraveling Bitcoin smart contracts** (2018), Nicola Atzei et al. [[pdf]](https://eprint.iacr.org/2018/192.pdf)
+- **From contracts to “smart” contracts** (2018), Massimo Bartoletti et al. [[pdf]](http://www.dmi.unipg.it/DLTWorkshop/presentazioni%20DLT%20workshop/bartoletti.pdf)
+- **BitML : a calculus for Bitcoin smart contracts** (2018), Massimo Bartoletti et al. [[pdf]](https://eprint.iacr.org/2018/122.pdf)
+- **Quantitative Analysis of Smart Contracts** (2018), Krishnendu Chatterjee et al. [[pdf]](http://pub.ist.ac.at/~akafshda/paperpdfs/esop2018.pdf)
+- **Smart Contracts Vulnerabilities: A Call for Blockchain Software Engineering?** (2018), Giuseppe Destefanis et al. [[pdf]](http://dspace.stir.ac.uk/bitstream/1893/27135/1/smart-contracts-vulnerabilities-3.pdf)
+- **Smart Contracts: Security Patterns in the Ethereum Ecosystem and Solidity** (2018), Maximilian Wöhrer and Uwe Zdun. [[pdf]](http://eprints.cs.univie.ac.at/5433/7/sanerws18iwbosemain-id1-p-380f58e-35576-preprint.pdf)
 
-This eliminates the below challenges from PoW and believed to have an advantage
 
-· No need of expensive hardware(a normal laptop or computer running the respective coin’s Validator client will do as long as your laptop or computer is online)
-· Energy efficient as it won’t consume high electricity as PoW does
-· More loyal Validators …As higher the stake the Validators have for a long time, more chances for the Validator to be picked up for “forging” and earn the transaction fee
-· Faster validations
+### 2017 papers
+*Published papers in 2017 which are worth reading*
+- **Ethereum Smart Contracts: Security Vulnerabilities and Security Tools** (2017), Ardit Dika. [[pdf]](https://brage.bibsys.no/xmlui/bitstream/handle/11250/2479191/18400_FULLTEXT.pdf?sequence=1)
+- **Validation and Verification of Smart Contracts: A Research Agenda** (2017),  Daniele Magazzeni et al. [[pdf]](https://core.ac.uk/download/pdf/96761687.pdf)
+- **Designing Secure Ethereum Smart Contracts: A Finite State Machine Based Approach** (2017), Anastasia Mavridou et al. [[pdf]](https://fc18.ifca.ai/preproceedings/101.pdf)
+- **Ethereum: state of knowledge and research perspectives** (2017),Sergei Tikhomirov. [[pdf]](https://allquantor.at/blockchainbib/pdf/tikhomirov2017ethereum.pdf)
+- **Quantstamp : The protocol for securing smart contracts** (2017), Richard Ma et al. [[pdf]](https://crushcrypto.com/wp-content/uploads/2017/10/QSP-Whitepaper.pdf)
+- **Findel: Secure Derivative Contracts for Ethereum** (2017), Alex Biryukov et al. [[pdf]](https://orbilu.uni.lu/bitstream/10993/30975/1/Findel_2017-03-08-CR.pdf)
 
-In PoS, each validator owns some stake in the network, Ether in the case of Ethereum, that they bond. Bonding stake means you deposit some money into the network, and in some sense use it as a collateral to vouch for a block. In PoW you know a chain is valid because lots of work is behind it, while in PoS you trust the chain with the highest collateral.
 
-There are much more differences between the various Proof of Stake algorithms that are being developed but I am limiting to what I said so far just to provide a higher level of differnces.
 
-There are currently issues with PoS as well, such as a small group of people owning a majority of tokens/coins will be the Validators but it is still evolving and eventually more solid and robust will be out there at some point in time.
+### 2015-6 papers
+*Published papers in 2015-6 (2015 is when smart contract was born) which are worth reading*
+- **Making Smart Contracts Smarter** (2016), Loi Luu et al. [[pdf]](https://eprint.iacr.org/2016/633.pdf)
+- **Short Paper: Formal Verification of Smart Contracts** (2016), Karthikeyan Bhargavan et al. [[pdf]](https://www.cs.umd.edu/~aseem/solidetherplas.pdf)
+- **A Survey of Attacks on Ethereum Smart Contracts (SoK)** (2016),Nicola Atzei et al. [[pdf]](https://eprint.iacr.org/2016/1007.pdf)
+- **Writing Secure Smart Contracts** (2016), IC3. [[pdf]](http://upyun-assets.ethfans.org/uploads/doc/file/f035d9aa385448f280a785715fff89e0.pdf?_upd=devcon-ic3.pdf)
+- **Step by Step Towards Creating a Safe Smart Contract: Lessons and Insights from a Cryptocurrency Lab** (2015), Kevin Delmolino et al. [[pdf]](https://eprint.iacr.org/2015/460.pdf)
 
-https://lvena26b6e621o8sl2qkx1ql-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/posvspow-453x450.jpg
+* * *
 
-# Reference
-[1] https://medium.com/@interlogica/the-nakamoto-consensus-ccdb7288169a
-[2]
+### Security SCI(E) Journal list
+
+* IEEE Transactions on Information Forensics and Security [[web]](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
+* Computer & Security[[web]](http://www.elsevier.com/wps/find/journaldescription.cws_home/405877/description#description)
+* IET Information Security[[web]](http://www.ietdl.org/IET-IFS)
+* ACM Transactions on Information and System Security[[web]](http://tissec.acm.org/)
+* International Journal of Information Security[[web]](http://www.springerlink.com/content/107927/)
+* Security and Communication Networks[[web]](http://www.wiley.com/bw/journal.asp?ref=1939-0114)
+* IEEE Security & Privacy[[web]](	http://www.computer.org/portal/web/security/home)
+* IEEE Transactions on Dependable and Secure Computing [[web]](http://www.computer.org/tdsc/)
+* Security and Communication Networks[[web]](http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1939-0122)
+* Computer Fraud & Security[[web]](http://www.elsevierscitech.com/nl/cfs/home.asp )
+
+### Links / Tutorials
+
+*(Links)*
+- **DASP TOP 10** [[web]](https://www.dasp.co/)
+- **Yoichi's Formal Verification of Ethereum Contracts** [[web]](https://github.com/pirapira/ethereum-formal-verification-overview/)
+- **How Formal Verification Can Ensure Flawless Smart Contracts** (2018), Bernhard Mueller. [[web]](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
+- **Reversing Ethereum Smart Contracts** [[web]](https://arvanaghi.com/blog/reversing-ethereum-smart-contracts/)
+
+- **Smart Contract Languages** [[web]](https://github.com/s-tikhomirov/smart-contract-languages)
+
+*(Tutorials)*
+- empty
+
+### References
+- **Ethereum: A NEXT GENERATION SMART CONTRACT & DECENTRALIZED APPLICATION PLATFORM** (2015),  Vitalik Buterin. [[pdf]](http://www.the-blockchain.com/docs/Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf)
+- **Ethereum Yellow Paper**[[pdf]](https://ethereum.github.io/yellowpaper/paper.pdf)
+- **Bitcoin: A Peer-to-Peer Electronic Cash System** (2009), Satoshi Nakamoto. [[pdf]](https://bitcoin.org/bitcoin.pdf)
+
+
+
+## License
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
