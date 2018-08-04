@@ -24,11 +24,11 @@
 
 | Name | Available Path | Features | Related Paper |
 | :---:         |     :---      |     :---  |      :---: |
-| Oyente        | http://oyente.melon.fund  | symbolic execution  | [[pdf]](https://eprint.iacr.org/2016/633.pdf)    |
 | Securify     | http://securify.ch    | formal verification  |  [[pdf]](https://arxiv.org/pdf/1806.01143.pdf)   |
+| Mythril        |  https://github.com/ConsenSys/mythril     |   concolic and taint analysis   |  [[pdf]](https://github.com/b-mueller/smashing-smart-contracts/blob/master/smashing-smart-contracts-1of1.pdf)  |
+| Oyente        | http://oyente.melon.fund  | symbolic execution  | [[pdf]](https://eprint.iacr.org/2016/633.pdf)    |
 | Remix        |  http://remix.ethereum.org     |  solidity compiler, debugger    |    |
 | SmartCheck        |    http://tool.smartdec.net     | static code analysis   |  |
-| Mythril        |  https://github.com/ConsenSys/mythril     |   concolic and taint analysis   |  [[pdf]](https://github.com/b-mueller/smashing-smart-contracts/blob/master/smashing-smart-contracts-1of1.pdf)  |
 | why3        |   http://why3.lri.fr/try/          | formal verification, general tool   |  |
 
 
