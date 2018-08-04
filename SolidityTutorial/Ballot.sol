@@ -59,7 +59,52 @@ contract Ballot {
         //assign reference
         Voter storage sender = voters[msg.sender];
         require(!sender.voted, "You already voted.");
+        
+        //Forward the delegation as long as 'to' also delagated
+        
+        while(voters[to].delegate !=address(0)){
+            to = voters[to].delegate;
+            require(to !=msg.sender, "Found loop in delegation");
+        }
+        
+        sender.voted = true;
+        sender.delegate = to;
+        Voter storage delegate_ = voters[to];
+        
+        if(delegate_.voted){
+            proposals[delegate_.vote].voteCount += sender.weight;
+        } else {
+            delegate_.weight +=sender.weight;
+        }
     }
+    
+    /// Give your vote including votes delegated to you to proposal proposals[proposal].name
+    
+    function vote(uint proposal) public {
+        Voter storage sender = voters[msg.sender];
+        require(!sender.voted, "Already voted.");
+        sender.voted = true;
+        sender.vote = proposal;
+        
+        proposals[proposal].voteCount += sender.weight;
+    }
+    
+    ///@dev computes the winning proposal taking all previous votes into account
+    function winningProposal() public view returns (uint winnningProposal_){
+        uint winningVoteCount = 0;
+        for(uint p=0; p<proposals.length; p++){
+            if(proposals[p].voteCount > winningVoteCount){
+                winningVoteCount = proposals[p].voteCount;
+                winnningProposal_ = p;
+            }
+        }
+    }
+    function winnerName() public view returns (bytes32 winnerName_){
+        winnerName_ = proposals[winningProposal()].name;
+    }
+    
+}
+		}
     
     
     
