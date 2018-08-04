@@ -1,6 +1,5 @@
-# Papers and Tools for Smart Contract Security Analysis
+# Publications and Tools for Blockchain & Smart Contract Security Analysis
 
-This space tries to show all papers about security analysis of smart contract.
 
 ## Contents
 
@@ -9,7 +8,7 @@ This space tries to show all papers about security analysis of smart contract.
 * [2018 Papers](#2018-papers) : Proceeding
 * [2017 Papers](#2017-papers)
 * [2015-6 Papers](#2015-6-papers)
-* [Security SCI(E) Journal list](#security-sci(e)-journal-list)
+* [Security Journal list](#security-sci(e)-journal-list)
 * [Links / Tutorials](#links--tutorials)
 * [References](#references)
 * * *
@@ -73,7 +72,7 @@ This space tries to show all papers about security analysis of smart contract.
 
 * * *
 
-### Security SCI(E) Journal list
+### SecurityJournal list
 
 * IEEE Transactions on Information Forensics and Security [[web]](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
 * Computer & Security[[web]](http://www.elsevier.com/wps/find/journaldescription.cws_home/405877/description#description)
@@ -103,5 +102,5 @@ This space tries to show all papers about security analysis of smart contract.
 - **Ethereum: A NEXT GENERATION SMART CONTRACT & DECENTRALIZED APPLICATION PLATFORM** (2015),  Vitalik Buterin. [[pdf]](http://www.the-blockchain.com/docs/Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf)
 - **Ethereum Yellow Paper**[[pdf]](https://ethereum.github.io/yellowpaper/paper.pdf)
 - **Bitcoin: A Peer-to-Peer Electronic Cash System** (2009), Satoshi Nakamoto. [[pdf]](https://bitcoin.org/bitcoin.pdf)
-
+- 88Apart from hyeonleee
 
