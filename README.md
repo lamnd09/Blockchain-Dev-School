@@ -4,11 +4,11 @@
 ## Contents
 
 * [Overview](#overview)
-* [Tools](#security-analysis-tools)
-* [2018 Papers](#2018-papers) : Proceeding
-* [2017 Papers](#2017-papers)
-* [2015-6 Papers](#2015-6-papers)
-* [Security Journal list](#security-sci(e)-journal-list)
+* [Security Tools](#security-analysis-tools)
+* [2018 Publications](#2018-papers) : Proceeding
+* [2017 Publications](#2017-papers)
+* [2015-6 Publications](#2015-6-papers)
+* [Security Articles list](#security-sci(e)-journal-list)
 * [Links / Tutorials](#links--tutorials)
 * [References](#references)
 * * *
